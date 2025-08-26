@@ -27,15 +27,6 @@ All data is stored in **LocalStorage**, so your tasks persist even after refresh
 
 ---
 
-## 📂 Project Structure
-
-├── index.html # Main HTML page
-├── style.css # Styling
-├── script.js # JavaScript logic
-└── README.md # Project documentation
-
----
-
 ## ⚡ Future Improvements
 
 - 🔎 Add **search functionality** for quick task lookup  
