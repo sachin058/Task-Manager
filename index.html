@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/general.css">
+    <link rel="stylesheet"  href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/content.css">
+    <link rel="stylesheet" href="CSS/tasklist.css">
+    <link rel="stylesheet" href="CSS/edittask.css">
+    <title>Task-Manager</title>
+</head>
+<body>
+    <div class="header">
+        
+        <div class="title-img-container">
+            <img class="title-img" src="image/check-list.png" >
+        </div>
+        <p class="header-title">Task-Manager</p>
+    
+    </div>
+        
+    <p class="header-description">Stay organized and get things done</p>
+    
+    <div class="counter-top">
+        <div class="total-counter">
+            <img src="image/app.png">
+            <p id="totaltasks">Total</p>
+        </div>
+        <div class="due-soon-counter">
+            <img src="image/calendar.png">
+            <p id="due-soon-value">Due Soon</p>
+        </div>
+        <div class="overdue-counter">
+            <img src="image/white-warning.png" >
+            <p id="overdue-value">Overdue</p>
+        </div>
+    </div>
+
+    <div class="priority-counter">
+        
+        <div class="high">
+            <img src="image/white-warning.png" alt="">
+            <p id="high-priority-count-value">High</p>
+        </div>
+
+        <div class="medium">
+            <img src="image/white-warning.png" alt="">
+            <p id="medium-priority-count-value">Medium</p>
+        </div>
+
+        <div class="low">
+            <img src="image/danger.png" alt="">
+            <p id="low-priority-count-value">Low</p>
+        </div>
+    
+    </div>
+
+    <!-- Add task area -->
+    <div class="task-input-container">
+
+        <div class="task-input-upperhalf">
+                
+            <p class="task-title">Task Title</p>
+            <input id="input-task-title" type="text" class="add-new-task" placeholder="Add a new task...">
+            <p class="description">Description</p>
+            <input id="input-task-description" type="text" class="input-description" placeholder="Add more details about your task...">
+
+        </div>
+        
+
+
+        <div class="lowerhalf-input-container">
+
+            <div class="priority-input-container">
+                <p>Priority</p>
+                <select id="input-task-priority" class="select-priority">
+                    
+                    <option >High</option>
+                    <option >Medium</option>
+                    <option >Low</option>
+                </select>
+            </div>
+
+            <div class="duedate-input-container">
+                <p>Due Date</p>
+                <input id="input-task-duedate" type="date">
+            </div>
+
+        </div>
+
+        <div class="button-area">
+            <button id="add-task-button" class="add-button">+ Add task</button>
+            <button id="clear-text-field-button" class="clear-button">Clear</button>
+        </div>
+
+    </div>
+    <!-- Filtering and sorting -->
+
+    <div class="filter-area">
+
+        <div class="completion-filter">
+            
+            <div class="slider"></div>
+
+            <div id="all-tasks-filter-button" data-index="0" class="filter-button active">
+                All tasks  
+            </div>
+            
+            <div id="pending-tasks-filter-button" data-index="1" class="filter-button">
+                Pending
+            </div>
+            
+            <div id="completed-tasks-filter-button" data-index="2" class="filter-button">
+                  Completed 
+            </div>
+        
+        </div>
+        
+
+        <div class="priority-filter">
+            <select id="priority-selector">
+                <option>All Priority</option>
+                <option>High Priority</option>
+                <option>Medium Priority</option>
+                <option>Low Priority</option>
+            </select>
+        
+            <select id="due-date-selector">
+                <option >Duedate</option>
+                <option >Priority</option>
+                <option >Date Created</option>
+            </select>
+
+            <div id="reverse-container">
+                <img id="reverse-icon" class="" src="image/up-down-arrows-icon.png" >
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- List task Element -->
+    <div class="display-area"></div>
+
+
+    <!-- Edit task Element -->
+
+    <div class="overlay hidden">
+
+        <form id="edit-form">
+
+            
+
+            <div class="edit-form-upper-half">
+                <label for="task-title-edit">Task Title</label>
+                <input type="text" id="task-title-edit">
+            
+                <label for="description-edit">Description</label>
+                <input type="text" id="description-edit">
+            
+            </div>
+            
+            <div class="edit-form-lower-half">
+
+                <div class="priority-edit-container">
+
+                    <label for="priority-edit">Priority</label>
+                    <select id="priority-edit">
+                
+                        <option>High</option>
+                        <option>Medium</option>
+                        <option>Low</option>
+
+                    </select>
+
+                </div>
+
+            
+                <div class="duedate-edit-container">
+
+                    <label for="due-date-edit">Duedate</label>
+                    <input type="date" id="due-date-edit">
+
+                </div>
+
+            </div>
+            
+            <div class="edit-button-container">
+
+                <button class="submit-button" type="submit">Submit</button>
+            <button class="cancel-button">Cancel</button>
+
+            </div>
+            
+        </form>
+        
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+.overlay{
+    position: fixed;
+    left: 0;
+    right:0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.815);
+
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 150ms;
+    
+}
+.hidden {
+    display: none;
+}
+#edit-form{
+    max-width: 700px;
+    width: 100%;
+    background-color: white;
+    border: none;
+    box-shadow: 0px 0px 5px gray;
+    opacity: 1;
+    font-size: 16px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.edit-form-upper-half {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.edit-form-upper-half label, .edit-form-lower-half label {
+    margin-bottom: 5px;
+}
+#edit-form input, .edit-form-lower-half select{
+    width: 100%;
+    padding: 8px 10px 8px 10px;
+    border-radius: 5px;
+    border:none;
+    background-color: rgb(230, 230, 230);
+    margin-bottom: 10px;
+}
+.edit-form-lower-half{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 4%;
+}
+.priority-edit-container, .duedate-edit-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+}
+.edit-button-container button {
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 15px;
+    border: none;
+    margin-top: 15px;
+    margin-right: 10px;
+    color: white;
+    
+}
+.submit-button {
+    background-color: rgb(0, 0, 184);
+}
+.cancel-button {
+    background-color: rgb(49, 49, 49);
+}

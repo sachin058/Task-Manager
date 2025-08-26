@@ -1,0 +1,108 @@
+.display-area {
+    width: 100%;
+    max-width: 900px;
+    min-width: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+@media (max-width:840px) {
+
+        .display-area {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+}
+
+
+.tasklist-container {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    border: 1px solid rgb(185, 185, 185);
+    padding: 20px 30px 20px 30px;
+    margin-top: 20px;
+    
+    max-width: 900px;
+    min-width: 400px;
+    border-radius: 10px;
+    gap: 15px;
+}
+.task-info {
+    flex:1;
+    
+}
+.tasklist-name {
+    color: black;
+    margin-bottom: 7px;
+}
+.tasklist-description {
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+.task-edit-delete {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+    
+}
+.priority-label-high img, .priority-label-medium img , .priority-label-low img {
+    width: 13px;
+    margin-right: 5px;
+    
+}
+.priority-label-high {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    border: none;
+    padding: 4px 4px 3px 4px;
+    border-radius: 8px;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    font-weight: bold;
+
+}
+.priority-label-medium {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    border: none;
+    padding: 4px 4px 3px 4px;
+    border-radius: 8px;
+    background-color: rgb(238, 181, 77);
+    color: white;
+    font-weight: bold;
+}
+.priority-label-low {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    border: none;
+    padding: 4px 4px 3px 4px;
+    border-radius: 8px;
+    background-color: rgb(232, 232, 232);
+    font-weight: bold;
+}
+
+.edit-icon img, .delete-icon img {
+    width: 20px;
+}
+.checkbox {
+    
+    
+    width: 19px;
+    height: 19px;
+}
+
+
+
+
